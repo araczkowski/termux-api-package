@@ -1,7 +1,7 @@
 // termux-api.c - helper binary for calling termux api classes
 // Usage: termux-api ${API_METHOD} ${ADDITIONAL_FLAGS}
 //        This executes
-//          am broadcast pl.sviete.dom.api/.TermuxApiReceiver --es socket_input ${INPUT_SOCKET}
+//          am broadcast pl.sviete.termux.api/.TermuxApiReceiver --es socket_input ${INPUT_SOCKET}
 //                                                        --es socket_output ${OUTPUT_SOCKET}
 //                                                        --es ${API_METHOD}
 //                                                        ${ADDITIONAL_FLAGS}
