@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh
+#!/data/data/pl.sviete.dom/files/usr/bin/sh
 set -e -u
 
 SCRIPTNAME=termux-fingerprint
@@ -23,4 +23,4 @@ if [ $# -ne 0 ]; then
     exit 1
 fi
 
-/data/data/com.termux/files/usr/libexec/termux-api Fingerprint
+/data/data/pl.sviete.dom/files/usr/libexec/termux-api Fingerprint

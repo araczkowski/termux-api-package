@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh
+#!/data/data/pl.sviete.dom/files/usr/bin/sh
 set -e -u
 
 SCRIPTNAME=termux-download
@@ -36,4 +36,4 @@ if [ -n "$ARG_D" ]; then set -- "$@" $ARG_D "$OPT_D"; fi
 if [ -n "$ARG_T" ]; then set -- "$@" $ARG_T "$OPT_T"; fi
 set -- "$@" $URL_TO_DOWNLOAD
 
-/data/data/com.termux/files/usr/libexec/termux-api Download "$@"
+/data/data/pl.sviete.dom/files/usr/libexec/termux-api Download "$@"

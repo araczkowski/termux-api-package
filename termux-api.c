@@ -1,7 +1,7 @@
 // termux-api.c - helper binary for calling termux api classes
 // Usage: termux-api ${API_METHOD} ${ADDITIONAL_FLAGS}
 //        This executes
-//          am broadcast com.termux.api/.TermuxApiReceiver --es socket_input ${INPUT_SOCKET} 
+//          am broadcast pl.sviete.dom.api/.TermuxApiReceiver --es socket_input ${INPUT_SOCKET} 
 //                                                        --es socket_output ${OUTPUT_SOCKET}
 //                                                        --es ${API_METHOD}
 //                                                        ${ADDITIONAL_FLAGS}
@@ -41,7 +41,7 @@ _Noreturn void exec_am_broadcast(int argc, char** argv, char* input_address_stri
     child_argv[2] = "--user";
     child_argv[3] = "0";
     child_argv[4] = "-n";
-    child_argv[5] = "com.termux.api/.TermuxApiReceiver";
+    child_argv[5] = "pl.sviete.dom.api/.TermuxApiReceiver";
     child_argv[6] = "--es";
     // Input/output are reversed for the java process (our output is its input):
     child_argv[7] = "socket_input";
@@ -60,9 +60,9 @@ _Noreturn void exec_am_broadcast(int argc, char** argv, char* input_address_stri
     child_argv[argc + extra_args] = NULL;
 
     // Use an a executable taking care of PATH and LD_LIBRARY_PATH:
-    execv("/data/data/com.termux/files/usr/bin/am", child_argv);
+    execv("/data/data/pl.sviete.dom/files/usr/bin/am", child_argv);
 
-    perror("execv(\"/data/data/com.termux/files/usr/bin/am\")");
+    perror("execv(\"/data/data/pl.sviete.dom/files/usr/bin/am\")");
     exit(1);
 }
 

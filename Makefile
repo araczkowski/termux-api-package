@@ -1,5 +1,5 @@
 CFLAGS += -std=c11 -Wall -Wextra -pedantic -Werror
-PREFIX ?= /data/data/com.termux/files/usr
+PREFIX ?= /data/data/pl.sviete.dom/files/usr
 
 termux-api: termux-api.c
 

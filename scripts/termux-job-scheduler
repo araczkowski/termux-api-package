@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/pl.sviete.dom/files/usr/bin/bash
 set -e -u -f
 
 SCRIPTNAME=termux-job-scheduler
@@ -86,4 +86,4 @@ if [ -n "$OPT_CHARGING" ]; then set -- "$@" --ez charging "$OPT_CHARGING"; fi
 if [ -n "$OPT_TRIGGER_CONTENT_URI" ]; then set -- "$@" --es trigger_content_uri "$OPT_TRIGGER_CONTENT_URI"; fi
 if [ -n "$OPT_TRIGGER_CONTENT_FLAG" ]; then set -- "$@" --ez trigger_content_flag "$OPT_TRIGGER_CONTENT_FLAG"; fi
 
-/data/data/com.termux/files/usr/libexec/termux-api JobScheduler "$@"
+/data/data/pl.sviete.dom/files/usr/libexec/termux-api JobScheduler "$@"

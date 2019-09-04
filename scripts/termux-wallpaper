@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/pl.sviete.dom/files/usr/bin/bash
 
 set -e
 
@@ -16,7 +16,7 @@ show_usage () {
 }
 
 call_api() {
-	/data/data/com.termux/files/usr/libexec/termux-api Wallpaper "$@"
+	/data/data/pl.sviete.dom/files/usr/libexec/termux-api Wallpaper "$@"
 }
 
 usage_error () {
