@@ -70,8 +70,8 @@ _Noreturn void exec_callback(int fd)
 {
     char *fds;
     if(asprintf(&fds, "%d", fd) == -1) { perror("asprintf"); }
-    execl("/data/data/com.termux/files/usr/libexec/termux-callback", "termux-callback", fds, NULL);
-    perror("execl(\"/data/data/com.termux/files/usr/libexec/termux-callback\")");
+    execl("/data/data/pl.sviete.dom/files/usr/libexec/termux-callback", "termux-callback", fds, NULL);
+    perror("execl(\"/data/data/pl.sviete.dom/files/usr/libexec/termux-callback\")");
     exit(1);
 }
 
