@@ -60,9 +60,9 @@ _Noreturn void exec_am_broadcast(int argc, char** argv, char* input_address_stri
     child_argv[argc + extra_args] = NULL;
 
     // Use an a executable taking care of PATH and LD_LIBRARY_PATH:
-    execv("/data/data/pl.sviete.dom/files/usr/bin/am", child_argv);
+    execv(PREFIX "/bin/am", child_argv);
 
-    perror("execv(\"/data/data/pl.sviete.dom/files/usr/bin/am\")");
+    perror("execv(\"" PREFIX "/bin/am\")");
     exit(1);
 }
 
@@ -70,8 +70,8 @@ _Noreturn void exec_callback(int fd)
 {
     char *fds;
     if(asprintf(&fds, "%d", fd) == -1) { perror("asprintf"); }
-    execl("/data/data/pl.sviete.dom/files/usr/libexec/termux-callback", "termux-callback", fds, NULL);
-    perror("execl(\"/data/data/pl.sviete.dom/files/usr/libexec/termux-callback\")");
+    execl(PREFIX "/libexec/termux-callback", "termux-callback", fds, NULL);
+    perror("execl(\"" PREFIX "/libexec/termux-callback\")");
     exit(1);
 }
 
